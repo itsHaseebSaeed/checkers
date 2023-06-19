@@ -13,6 +13,15 @@ export interface CheckersMsgCreateGameResponse {
   gameIndex?: string;
 }
 
+export interface CheckersMsgPlayMoveResponse {
+  /** @format int32 */
+  capturedX?: number;
+
+  /** @format int32 */
+  capturedY?: number;
+  winner?: string;
+}
+
 /**
  * Params defines the parameters for the module.
  */
@@ -55,6 +64,7 @@ export interface CheckersStoredGame {
   turn?: string;
   black?: string;
   red?: string;
+  winner?: string;
 }
 
 export interface CheckersSystemInfo {
